@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Patients</title>
+    <style>
+
+        body
+        {
+            background-color: #3456A8;
+            color: limegreen;
+        }
+
+        div
+        {
+            margin: auto;
+        }
+
+        form
+        {
+            margin-left: 10%;
+        }
+        div>div>h1
+        {
+            font-size: 40pt;
+            color: red;
+            text-align: center;
+            animation: animate 3s linear infinite;
+            margin-bottom: 20%;
+
+        }
+        @keyframes animate {
+
+            25% {color: firebrick; background-color: yellow}
+            50% { color: yellow; background-color: firebrick}
+            100% { transform: rotate(360deg) ; }
+
+
+
+        }
+
+        h1:hover
+        {
+            color: limegreen;
+
+        }
+
+        button
+        {
+            padding: 10px;
+            color: red;
+            background-color: #3456A8;
+
+
+        }
+        #grid
+        {
+            display: grid;
+            place-items: center;
+        }
+        table
+        {
+            text-align: center;
+        }
+        tr:nth-child(2n+1)
+        {
+            color: yellow;
+        }
+        #float
+        {
+
+            font-size: 40pt;
+            position: absolute;
+            top: 30%;
+            left: 65%;
+
+        }
+        #back
+        {
+            width: 525px;
+        }
+        #back>a
+        {
+            text-decoration: none;
+            color: firebrick;
+            font-size: 15pt;
+        }
+
+
+
+    </style>
+</head>
+   <body>
+
+   <div id="grid">
+
+       <div>
+   <h1>Patients</h1>
+
+
+      <table border=15 cellpadding=15 cellspacing=10>
+         <thead>
+            <th>pid</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>did</th>
+         </thead>
+        <tbody>
+         {% for patient in patients %}
+            <tr>
+               <td>{{ patient[0] }}</td>
+               <td>{{ patient[1] }}</td>
+	       <td>{{ patient[2] }}</td>
+	       <td>{{ patient[3] }}</td>
+	       <td>{{ patient[4] }}</td>
+
+
+            </tr>
+          {% endfor %}
+
+          </tbody>
+      </table>
+
+       </div>
+         <div id="float">
+       <h1>Total Number of Patients = {{total_patients}}</h1>
+   </div>
+        <a href="/">
+            <button id="back">
+            BACK
+        </button>
+            </a>
+   </div>
+
+   </body>
+</html>

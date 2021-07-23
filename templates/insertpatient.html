@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Insert Patient</title>
+    <style>
+
+        body
+        {
+            background-color: #3456A8;
+            color: limegreen;
+        }
+
+        div
+        {
+            margin-left: 38%;
+            margin-top: 5%;
+        }
+
+        form
+        {
+            margin-left: 10%;
+        }
+        div h1
+        {
+            color: red;
+            margin-left: 6%;
+
+        }
+        h1:hover
+        {
+            color: limegreen;
+
+        }
+
+        button
+        {
+            padding: 10px;
+            color: red;
+            background-color: darkgray;
+            position:absolute;
+
+
+
+
+        }
+        hr
+        {
+            margin-bottom: 10%;
+            margin-top: 10%;
+        }
+        label
+        {
+            margin-right: 2%;
+            margin-bottom: 3%;
+        }
+        input
+        {
+            margin-bottom: 3%;
+        }
+        button
+        {
+            width: 20%;
+
+        }
+        #back
+        {
+            position: relative;
+            left: 50%;
+        }
+
+
+
+    </style>
+</head>
+   <body>
+
+   <div>
+       <form action="/postpatient" , method="POST">
+
+           <label for="pid"> Patient ID: </label>
+            <input type="text" id="pid" name="pid"><br>
+
+           <label for="pname"> Patient Name: </label>
+            <input type="text" id="pname" name="pname"><br>
+
+             <label for="address"> Address: </label>
+            <input type="text" id="address" name="address"><br>
+
+             <label for="age"> Age: </label>
+            <input type="text" id="age" name="age"><br>
+
+            <label for="did"> Primary Doctor ID: </label>
+            <input type="text" id="did" name="did"><br>
+
+           <button type="submit">
+               Add
+           </button>
+    <br/>
+       </form>
+
+            <a href="/">
+            <button id="back">
+            BACK
+        </button>
+            </a>
+   </div>
+
+    <hr/>
+
+
+   </body>
+</html>

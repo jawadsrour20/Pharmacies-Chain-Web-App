@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Drugs</title>
+    <style>
+
+        body
+        {
+            background-color: #3456A8;
+            color: limegreen;
+        }
+
+        div
+        {
+            margin: auto;
+        }
+
+        form
+        {
+            margin-left: 10%;
+        }
+        div>div>h1
+        {
+            font-size: 40pt;
+            color: red;
+            text-align: center;
+            animation: animate 3s linear infinite;
+            margin-bottom: 20%;
+
+        }
+        @keyframes animate {
+
+            25% {color: firebrick; background-color: yellow}
+            50% { color: yellow; background-color: firebrick}
+            100% { transform: rotate(360deg) ; }
+
+
+
+        }
+
+        h1:hover
+        {
+            color: limegreen;
+
+        }
+
+         button
+        {
+            padding: 10px;
+            color: red;
+            background-color: deepskyblue;
+
+        }
+        #grid
+        {
+            display: grid;
+            place-items: center;
+        }
+        table
+        {
+            text-align: center;
+        }
+        tr:nth-child(2n+1)
+        {
+            color: yellow;
+        }
+         #back
+        {
+            width: 365px;
+        }
+        #back>a
+        {
+            text-decoration: none;
+            color: firebrick;
+            font-size: 15pt;
+        }
+
+
+    </style>
+</head>
+   <body>
+
+   <div id="grid">
+    <div>
+   <h1>Drugs</h1>
+
+
+      <table border=15 cellpadding=15 cellspacing=10>
+         <thead>
+            <th>MID</th>
+            <th>Name</th>
+            <th>Formula</th>
+
+         </thead>
+        <tbody>
+         {% for drug in drugs %}
+            <tr>
+               <td>{{ drug[0] }}</td>
+               <td>{{ drug[1] }}</td>
+	       <td>{{ drug[2] }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+      </table>
+           <a href="/">
+            <button id="back">
+            BACK
+        </button>
+            </a>
+   </div>
+
+       </div>
+   </body>
+</html>

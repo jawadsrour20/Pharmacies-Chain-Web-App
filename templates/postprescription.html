@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Post Prescription</title>
+    <style>
+
+        body
+        {
+            background-color: #3456A8;
+            color: limegreen;
+        }
+
+        div
+        {
+            margin-left: 38%;
+            margin-top: 5%;
+        }
+
+        form
+        {
+            margin-left: 10%;
+        }
+        div h1
+        {
+            color: red;
+            margin-left: 6%;
+
+        }
+        h1:hover
+        {
+            color: limegreen;
+
+        }
+
+        button
+        {
+            padding: 10px;
+            color: red;
+            background-color: darkgray;
+            position:absolute;
+
+
+
+
+        }
+        hr
+        {
+            margin-bottom: 10%;
+            margin-top: 10%;
+        }
+        label
+        {
+            margin-right: 2%;
+            margin-bottom: 3%;
+        }
+        input
+        {
+            margin-bottom: 3%;
+        }
+        button
+        {
+            width: 20%;
+
+        }
+        #back
+        {
+            position: relative;
+            left: 50%;
+        }
+
+
+
+    </style>
+</head>
+   <body>
+
+   <div>
+       <form action="/postprescription" , method="POST">
+
+           <label for="presc_id"> Prescription ID: </label>
+            <input type="text" id="presc_id" name="presc_id"><br>
+
+           <label for="date"> Date: </label>
+            <input type="text" id="date" name="date"><br>
+
+             <label for="description"> Description: </label>
+            <input type="text" id="description" name="description"><br>
+
+
+            <label for="did"> Doctor ID: </label>
+            <input type="text" id="did" name="did"><br>
+
+                   <label for="pid"> Patient ID: </label>
+            <input type="text" id="pid" name="pid"><br>
+                   <label for="mid"> Drug ID: </label>
+            <input type="text" id="mid" name="mid"><br>
+           <button type="submit">
+               Add
+           </button>
+    <br/>
+       </form>
+
+            <a href="/">
+            <button id="back">
+            BACK
+        </button>
+            </a>
+   </div>
+
+    <hr/>
+
+
+   </body>
+</html>

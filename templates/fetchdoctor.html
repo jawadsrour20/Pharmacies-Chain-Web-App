@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Fetch Doctor</title>
+    <style>
+
+        body
+        {
+            background-color: #3456A8;
+            color: limegreen;
+        }
+
+        div
+        {
+            margin-left: 38%;
+            margin-top: 5%;
+        }
+
+        form
+        {
+            margin-left: 10%;
+        }
+        div h1
+        {
+            color: red;
+            margin-left: 6%;
+
+        }
+        h1:hover
+        {
+            color: limegreen;
+
+        }
+
+        button
+        {
+            padding: 10px;
+            color: red;
+            background-color: darkgray;
+            position:absolute;
+
+
+
+
+        }
+        hr
+        {
+            margin-bottom: 10%;
+            margin-top: 10%;
+        }
+
+        #back
+        {
+            margin-top: 50px;
+            width: 525px;
+        }
+        #back>a
+        {
+            text-decoration: none;
+            color: firebrick;
+            font-size: 15pt;
+        }
+
+
+
+    </style>
+</head>
+   <body>
+
+   <div>
+       <form action="/fetchdoctor" , method="POST">
+
+           <label for="did"> Doctor ID: </label>
+            <input type="text" id="did" name="did"><br>
+
+           <br>
+           <button type="submit">
+               Fetch
+           </button>
+
+       </form>
+
+            <a href="/">
+            <button id="back">
+            BACK
+        </button>
+            </a>
+   </div>
+
+    <hr/>
+
+   <div>
+
+       {% if name != "" %}
+       <p>Doctor is {{name}} and has {{patients_number}} patients</p>
+       <p>Patient names are:</p>
+       <ol>
+           {% for patient in patient_names %}
+           <li>{{patient}}</li>
+           {% endfor %}
+       </ol>
+       <p>Pharmacy names:</p>
+       <ol>
+             {% for pharmacy in pharmacy_names %}
+           <li>{{pharmacy}}</li>
+           {% endfor %}
+       </ol>
+       <p>Drugs and formulae:</p>
+       <ol>
+           {% for key, value in drug_formula_dict.items() %}
+           <li>{{key}} ~ {{value}}</li>
+           {% endfor %}
+       </ol>
+
+
+       {% endif %}
+
+
+   </div>
+
+   </body>
+</html>
